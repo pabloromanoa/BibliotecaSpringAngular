@@ -1,0 +1,71 @@
+.modal-box{
+
+    padding: 5px;
+    .form-box{
+        margin: 10px 0px;
+        display: grid;
+        .seccion{
+        
+        
+            background-color: #f1efed;
+            padding: 20px;
+            margin: 10px 0px;
+            border: none;
+            border-radius: 5px;
+ 
+            .title{
+                font-size: 18px;
+                color: #252727;
+            }
+    
+       
+    
+          .fila{
+             display: flex;
+             align-items: center;
+    
+             .input-box{
+                margin: 0px 10px;               
+             }
+             .label-box{
+                display: grid;
+ 
+                .titulo{
+                   margin-bottom: -20px;
+                }
+ 
+               }
+               .textarea-box{
+                  width: 100%;
+               }
+            }
+        }
+    }
+}
+
+button{
+   width: 60px;
+   height: 40px;
+   text-transform: uppercase;
+   font-size: 0.6rem;
+   border: none;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+   color: #151313;
+   margin: 0px 5px;
+   border-radius: 2px;
+ }
+
+.dialog-buttons{
+    width: 100%;
+    display: grid;
+    margin-right: 8px;
+ }
+ .center{
+    display: flex;
+    justify-content: center;
+ }
+ .end{
+    display: flex;
+    justify-content: flex-end;
+ }

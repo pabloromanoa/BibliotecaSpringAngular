@@ -1,0 +1,74 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  .id {
+    width: 10%;
+  }
+  
+  .titulo {
+    width: 15%;
+  }
+  
+  .tipo{
+    width: 13%;
+  }
+  
+  .editorial{
+    width: 17%;
+  }
+  
+  .anio{
+    width: 12%;
+  }
+  
+  .autor{
+    width: 15%;
+  }
+  
+  .actions{
+    width: 18%;
+  }
+  
+  .btn-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    button{
+      width: 60px;
+      height: 40px;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      border: none;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #151313;
+      margin: 0px 5px;
+      border-radius: 2px;
+    }
+  
+    .edit{
+      background-color: #add8e6;
+    
+      &:hover{
+         background-color: #84b6c7;
+      }
+    }
+    
+    .delete{
+      background-color: #ec6678;
+    
+      &:hover{
+         background-color: #dd5366;
+      }
+    }
+  
+  
+  }
+  

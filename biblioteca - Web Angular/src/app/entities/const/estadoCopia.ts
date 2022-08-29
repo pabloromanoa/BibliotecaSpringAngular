@@ -1,0 +1,1 @@
+export enum estadoCopia{PRESTADO,RETRASO,BIBLIOTECA,REPARACION};

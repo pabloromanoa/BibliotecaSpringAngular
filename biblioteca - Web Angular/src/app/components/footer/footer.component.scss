@@ -1,0 +1,13 @@
+@import 'src/assets/variables.scss';
+
+#footer{
+   background-color: #1f1f1f;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 40px;
+   font-size: 0.8rem;
+   letter-spacing: 5px;
+   padding-top: 12px;
+}

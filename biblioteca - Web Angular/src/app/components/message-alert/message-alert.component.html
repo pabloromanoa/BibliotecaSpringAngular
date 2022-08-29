@@ -1,0 +1,37 @@
+
+<h1 mat-dialog-title>{{message.title}}</h1>
+<div mat-dialog-content>
+   <div *ngIf="message.type == 'success'" class="icon-box" [class]="message.type">
+      <i class="fa fa-check-circle fa-7x"></i>
+   </div>
+   <div *ngIf="message.type == 'warning'" class="icon-box" [class]="message.type">
+      <i class="fa fa-exclamation-circle fa-7x"></i>
+   </div>
+   <div *ngIf="message.type == 'error'" class="icon-box" [class]="message.type">
+      <i class="fa fa-times-circle fa-7x"></i>
+   </div>
+   <div *ngIf="message.type == 'info'" class="icon-box" [class]="message.type">
+      <i class="fa fa-info-circle fa-7x"></i>
+   </div>
+   <div *ngIf="message.type == 'question' || message.type == 'input'" class="icon-box" [class]="message.type">
+      <i class="fa fa-question-circle fa-7x"></i>
+   </div>
+
+   <div class="dialog-body">
+      {{message.text}}
+   </div>
+   <div class="dialog-input" *ngIf="message.type == 'input'">
+      <mat-form-field appearance="fill">
+         <mat-label>*</mat-label>
+         <input type="number" min="0" [(ngModel)]="input" matInput>
+      </mat-form-field>
+   </div>
+
+</div>
+<div mat-dialog-actions align="end">
+
+  <button *ngIf="message.type == 'question' || message.type =='input'" mat-button (click)="close(false)">Cancelar</button>
+  <button *ngIf="message.type == 'input'" [disabled]="input == ''" mat-button (click)="closeInput()">Aceptar</button>
+  <button *ngIf="message.type != 'input'" mat-button (click)="close(true)">Aceptar</button>
+
+</div>

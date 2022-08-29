@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>EDITAR LIBRO</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="modal-box">
+        <div class="form-box">
+            <div class="seccion" id="editarLibro">
+                <div id="libro-form" [formGroup]="libroForm">
+                    <div class="title">DATOS DEL LIBRO:</div>
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Titulo</mat-label>
+                                <input type="text" formControlName="titulo" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Tipo</mat-label>
+                                <mat-select formControlName="tipo">
+                                    <mat-option *ngFor="let tipo of tiposLibro" [value]="tipo.id_tipo">
+                                        {{tipo.descripcion}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Autor</mat-label>
+                                <input type="text" formControlName="autor" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Editorial</mat-label>
+                                <input type="text" formControlName="editorial" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Año</mat-label>
+                                <input type="number" formControlName="anio" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="dialog-buttons">
+        <!-- <div class="center">
+          <button (click)="viewData()">Ver datos</button>
+       </div> -->
+        <div class="end">
+            <button mat-raised-button mat-dialog-close>Cancelar</button>
+            <button (click)="submit()" mat-raised-button cdkFocusInitial>Guardar Cambios</button>
+        </div>
+    </div>
+</mat-dialog-actions>

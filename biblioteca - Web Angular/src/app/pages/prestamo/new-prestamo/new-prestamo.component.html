@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>NUEVO PRESTAMO</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="modal-box">
+        <div class="form-box">
+            <div class="seccion" id="nuevoPrestamo">
+                <div id="libro-form" [formGroup]="prestamoForm">
+                    <div class="title">DATOS DEL PRESTAMO:</div>
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>LIBRO</mat-label>
+                                <mat-select formControlName="id_libro">
+                                    <mat-option *ngFor="let libro of libros" [value]="libro.id_libro">
+                                        {{libro.titulo}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>LECTOR</mat-label>
+                                <mat-select formControlName="id_lector">
+                                    <mat-option *ngFor="let lector of lectores" [value]="lector.id_lector">
+                                        {{lector.nombre}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="dialog-buttons">
+        <!-- <div class="center">
+          <button (click)="viewData()">Ver datos</button>
+       </div> -->
+        <div class="end">
+            <button mat-raised-button mat-dialog-close>Cancelar</button>
+            <button (click)="prestarLibro()" mat-raised-button cdkFocusInitial>PRESTAR LIBRO</button>
+        </div>
+    </div>
+</mat-dialog-actions>

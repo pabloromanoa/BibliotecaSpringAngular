@@ -1,0 +1,53 @@
+<section>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <p>AGREGAR NUEVO LIBRO</p>
+            </div>
+            <div class="card-body">
+                <div id="libro-form" [formGroup]="libroForm">
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Titulo</mat-label>
+                                <input type="text" formControlName="titulo" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Tipo</mat-label>
+                                <mat-select formControlName="tipo">
+                                    <mat-option *ngFor="let tipo of tiposLibro" [value]="tipo.id_tipo">
+                                        {{tipo.descripcion}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Autor</mat-label>
+                                <input type="text" formControlName="autor" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Editorial</mat-label>
+                                <input type="text" formControlName="editorial" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Año</mat-label>
+                                <input type="number" formControlName="anio" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="addLibro()" [disabled]="!libroForm.valid" class="default-btn i-btn">AGREGAR</button>
+            </div>
+        </div>
+    </div>
+</section>

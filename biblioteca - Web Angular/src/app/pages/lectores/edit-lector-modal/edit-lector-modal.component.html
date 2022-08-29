@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>EDITAR LECTOR</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="modal-box">
+        <div class="form-box">
+            <div class="seccion" id="editarLector">
+                <div id="lector-form" [formGroup]="lectorForm">
+                    <div class="title">DATOS DEL LECTOR:</div>
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Nombre</mat-label>
+                                <input type="text" formControlName="nombre" matInput>
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <hr>
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Direccion</mat-label>
+                                <input type="textarea" formControlName="direccion" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Telefono</mat-label>
+                                <input type="text" formControlName="telefono" matInput>
+                            </mat-form-field>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="dialog-buttons">
+        <!-- <div class="center">
+          <button (click)="viewData()">Ver datos</button>
+       </div> -->
+        <div class="end">
+            <button mat-raised-button mat-dialog-close>Cancelar</button>
+            <button (click)="submit()" mat-raised-button cdkFocusInitial>Guardar Cambios</button>
+        </div>
+    </div>
+</mat-dialog-actions>

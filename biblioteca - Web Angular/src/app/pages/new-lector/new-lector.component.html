@@ -1,0 +1,38 @@
+<section>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <p>AGREGAR NUEVO LECTOR</p>
+            </div>
+            <div class="card-body">
+                <div id="libro-form" [formGroup]="lectorForm">
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Nombre</mat-label>
+                                <input type="text" formControlName="nombre" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="fila">
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Direccion</mat-label>
+                                <input type="textarea" formControlName="direccion" matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-box">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Telefono</mat-label>
+                                <input type="text" formControlName="telefono" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="addLector()" [disabled]="!lectorForm.valid" class="default-btn i-btn">AGREGAR</button>
+            </div>
+        </div>
+    </div>
+</section>
+
